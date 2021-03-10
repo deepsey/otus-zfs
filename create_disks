@@ -1,0 +1,8 @@
+Script started on 2021-03-09 12:30:50+00:00
+]0;root@otus-zfs2:~[root@otus-zfs2 ~]# echo disk{1..5} | xargs -n 1 fallocate -l 500M
+]0;root@otus-zfs2:~[root@otus-zfs2 ~]# echo disk{1..5} | xargs -n 1 fallocate -l 500M[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cxit[Kcp -rf linux-5.11.4 /mypool/gzip[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Ptar -xf linux-5.11.4.tar.xz[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cwget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.11.4.tar.xz[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[42Ptar -xf linux-5.11.4.tar.xz[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp -r linux-5.11.4 /mypool/gzip[1@f[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kcho disk{1..5} | xargs -n 1 fallocate -l 500M[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Krm -f disk*
+]0;root@otus-zfs2:~[root@otus-zfs2 ~]# rm -f disk*echo disk{1..5} | xargs -n 1 fallocate -l 500M[K[K[K[K1000M
+]0;root@otus-zfs2:~[root@otus-zfs2 ~]# exit
+exit
+
+Script done on 2021-03-09 12:31:51+00:00

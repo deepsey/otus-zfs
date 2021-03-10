@@ -1,0 +1,35 @@
+Script started on 2021-03-09 10:22:04+00:00
+]0;root@otus-zfs2:~[root@otus-zfs2 ~]# exitzfs create mystorage/gzip[1Pystorage/gzip[1Pstorage/gzip[1Ptorage/gzip[1Porage/gzip[1Prage/gzip[1Page/gzip[1Pge/gzip[1Pe/gzip[1P/gzip[1Pgzip[1Pzip[1Pip[1Pp[Kmypool/gzip
+]0;root@otus-zfs2:~[root@otus-zfs2 ~]# zfs create mypool/gzip[K[K[K[Klz4
+]0;root@otus-zfs2:~[root@otus-zfs2 ~]# zfs create mypool/lz4[K[K[Klzjb
+]0;root@otus-zfs2:~[root@otus-zfs2 ~]# zfs create mypool/lzjb[K[K[K[Kzle
+]0;root@otus-zfs2:~[root@otus-zfs2 ~]# zfs list
+NAME             USED  AVAIL     REFER  MOUNTPOINT
+mypool           312K  1.22G     44.7K  /mypool
+mypool/gzip     39.3K  1.22G     39.3K  /mypool/gzip
+mypool/lz4      39.3K  1.22G     39.3K  /mypool/lz4
+mypool/lzjb     39.3K  1.22G     39.3K  /mypool/lzjb
+mypool/zle      39.3K  1.22G     39.3K  /mypool/zle
+otus            5.07M   347M       25K  /otus
+otus/hometask2  1.88M   347M     1.88M  /otus/hometask2
+otus/storage    2.89M   347M     2.83M  /otus/storage
+]0;root@otus-zfs2:~[root@otus-zfs2 ~]# zfs set compe[Kression=gzip mypool/gzip
+]0;root@otus-zfs2:~[root@otus-zfs2 ~]# zfs set compression=gzip mypool/gzip[1P[1P[1P[1P mypool/gzipl mypool/gzipz mypool/gzip4 mypool/gzip[C[C[C[C[C[C[C[C[1Pzip[1Pip[1Pp[Klz4
+]0;root@otus-zfs2:~[root@otus-zfs2 ~]# zfs set compression=lz4 mypool/lz4[1P mypool/lz4j mypool/lz4b mypool/lz4[C[C[C[C[C[C[C[C[C[C[Kjb
+]0;root@otus-zfs2:~[root@otus-zfs2 ~]# zfs set compression=lzjb mypool/lzjb[1P[1P[1P[1P mypool/lzjbz mypool/lzjbl mypool/lzjbe mypool/lzjb[C[C[C[C[C[C[C[C[1Pzjb[1Pjb[1Pb[Kzle
+]0;root@otus-zfs2:~[root@otus-zfs2 ~]# zfs get compression,compressratio
+NAME                PROPERTY       VALUE     SOURCE
+mypool              compression    off       default
+mypool              compressratio  1.00x     -
+mypool/gzip         compression    gzip      local
+mypool/gzip         compressratio  1.00x     -
+mypool/lz4          compression    lz4       local
+mypool/lz4          compressratio  1.00x     -
+mypool/lzjb         compression    lzjb      local
+mypool/lzjb         compressratio  1.00x     -
+mypool/zle          compression    zle       local
+mypool/zle          compressratio  1.00x     -
+]0;root@otus-zfs2:~[root@otus-zfs2 ~]# exit
+exit
+
+Script done on 2021-03-09 10:26:19+00:00

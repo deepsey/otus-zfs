@@ -1,0 +1,36 @@
+Script started on 2021-03-10 05:39:00+00:00
+]0;root@otus-zfs2:~/zfs_hw_2[root@otus-zfs2 zfs_hw_2]# zpool list otus
+NAME   SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT
+otus   480M  2.09M   478M        -         -     0%     0%  1.00x    ONLINE  -
+]0;root@otus-zfs2:~/zfs_hw_2[root@otus-zfs2 zfs_hw_2]# zpool status otus
+  pool: otus
+ state: ONLINE
+  scan: none requested
+config:
+
+	NAME                                  STATE     READ WRITE CKSUM
+	otus                                  ONLINE       0     0     0
+	  mirror-0                            ONLINE       0     0     0
+	    /root/zfs_hw_2/zpoolexport/filea  ONLINE       0     0     0
+	    /root/zfs_hw_2/zpoolexport/fileb  ONLINE       0     0     0
+
+errors: No known data errors
+]0;root@otus-zfs2:~/zfs_hw_2[root@otus-zfs2 zfs_hw_2]# zpool get [K[K[K[K[K[K[K[K[Kfs list otus
+NAME   USED  AVAIL     REFER  MOUNTPOINT
+otus  2.04M   350M       24K  /otus
+]0;root@otus-zfs2:~/zfs_hw_2[root@otus-zfs2 zfs_hw_2]# zfs get mountpoint otus
+NAME  PROPERTY    VALUE       SOURCE
+otus  mountpoint  /otus       default
+]0;root@otus-zfs2:~/zfs_hw_2[root@otus-zfs2 zfs_hw_2]# zfs get recordsize otus
+NAME  PROPERTY    VALUE    SOURCE
+otus  recordsize  128K     local
+]0;root@otus-zfs2:~/zfs_hw_2[root@otus-zfs2 zfs_hw_2]# zfs get compression otus
+NAME  PROPERTY     VALUE     SOURCE
+otus  compression  zle       local
+]0;root@otus-zfs2:~/zfs_hw_2[root@otus-zfs2 zfs_hw_2]# zfs get checksum otus
+NAME  PROPERTY  VALUE      SOURCE
+otus  checksum  sha256     local
+]0;root@otus-zfs2:~/zfs_hw_2[root@otus-zfs2 zfs_hw_2]# exit
+exit
+
+Script done on 2021-03-10 05:45:53+00:00

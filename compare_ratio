@@ -1,0 +1,17 @@
+Script started on 2021-03-09 12:58:36+00:00
+]0;root@otus-zfs2:~[root@otus-zfs2 ~]# zfs get compression,compressratio
+NAME         PROPERTY       VALUE     SOURCE
+mypool       compression    off       default
+mypool       compressratio  2.10x     -
+mypool/gzip  compression    gzip      local
+mypool/gzip  compressratio  4.44x     -
+mypool/lz4   compression    lz4       local
+mypool/lz4   compressratio  2.87x     -
+mypool/lzjb  compression    lzjb      local
+mypool/lzjb  compressratio  2.49x     -
+mypool/zle   compression    zle       local
+mypool/zle   compressratio  1.08x     -
+]0;root@otus-zfs2:~[root@otus-zfs2 ~]# exit
+exit
+
+Script done on 2021-03-09 12:59:42+00:00

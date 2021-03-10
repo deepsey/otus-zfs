@@ -1,0 +1,25 @@
+Script started on 2021-03-09 12:32:08+00:00
+]0;root@otus-zfs2:~[root@otus-zfs2 ~]# zpool create mypool raidz2 $PWD/disk[1-5]
+]0;root@otus-zfs2:~[root@otus-zfs2 ~]# zpool l[Kstatus mypool
+  pool: mypool
+ state: ONLINE
+  scan: none requested
+config:
+
+	NAME             STATE     READ WRITE CKSUM
+	mypool           ONLINE       0     0     0
+	  raidz2-0       ONLINE       0     0     0
+	    /root/disk1  ONLINE       0     0     0
+	    /root/disk2  ONLINE       0     0     0
+	    /root/disk3  ONLINE       0     0     0
+	    /root/disk4  ONLINE       0     0     0
+	    /root/disk5  ONLINE       0     0     0
+
+errors: No known data errors
+]0;root@otus-zfs2:~[root@otus-zfs2 ~]# zpool status mypool[1P[1P[1P[1P[1P[1P mypooll mypooli mypools mypoolt mypool
+NAME     SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT
+mypool  4.50G   264K  4.50G        -         -     0%     0%  1.00x    ONLINE  -
+]0;root@otus-zfs2:~[root@otus-zfs2 ~]# exit
+exit
+
+Script done on 2021-03-09 12:33:50+00:00
